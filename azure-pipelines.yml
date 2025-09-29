@@ -24,7 +24,8 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Tailspin.SpaceGame.Web/Dockerfile'
         containerRegistry: 'ado-web-app-docker-service-connection-003'
         tags: |
-          $(tag)
+           latest
+           $(tag)
 
 - stage: 'Deploy'
   displayName: 'Deploy the container'
