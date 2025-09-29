@@ -41,5 +41,6 @@ stages:
       inputs:
        appName: $(var_AppServiceDockerName)
        azureSubscription: 'ado-web-app-service-connection'
-       imageName: $(var_RegistryContainer)/$(webRepository):$(Build.buildId)
+       imageName: $(webRepository)
+       # imageName: $(var_RegistryContainer)/$(webRepository):$(Build.buildId)
        # a
