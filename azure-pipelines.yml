@@ -43,4 +43,4 @@ stages:
        azureSubscription: 'ado-web-app-service-connection'
        imageName: 'adowebappregistrycontainer002.azurecr.io/web:159'
        # imageName: $(var_RegistryContainer)/$(webRepository):$(Build.buildId)
-       # d
+       # e
