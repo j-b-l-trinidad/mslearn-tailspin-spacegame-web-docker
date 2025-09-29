@@ -41,6 +41,6 @@ stages:
       inputs:
        appName: $(var_AppServiceDockerName)
        azureSubscription: 'ado-web-app-docker-service-connection-002'
-       imageName: 'adowebappregistrycontainer001.azurecr.io/web:latest'
+       imageName: 'adowebappregistrycontainer002.azurecr.io/web:latest'
        # imageName: $(var_RegistryContainer)/$(webRepository):$(Build.buildId)
-       # d
+       # e
