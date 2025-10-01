@@ -22,7 +22,7 @@ stages:
         buildContext: $(Build.Repository.LocalPath)
         repository: $(webRepository)
         dockerfile: '$(Build.SourcesDirectory)/Tailspin.SpaceGame.Web/Dockerfile'
-        containerRegistry: 'tailspin-container-connection'
+        containerRegistry: 'ado-docker-container-registry-service-connection-001'
         tags: |
            latest
            $(tag)
@@ -41,7 +41,7 @@ stages:
     - task: AzureWebAppContainer@1
       inputs:
        appName: $(var_AppServiceDockerName)
-       azureSubscription: 'tailspin-resource-manager-connection'
-       imageName: 'adowebappdockercontainerregistry007.azurecr.io/web:latest'
+       azureSubscription: 'ado-docker-arm-service-connection-001'
+       imageName: 'adowebappregistry001.azurecr.io/web:latest'
        # imageName: $(var_RegistryContainer)/$(webRepository):$(Build.buildId)
        # f
