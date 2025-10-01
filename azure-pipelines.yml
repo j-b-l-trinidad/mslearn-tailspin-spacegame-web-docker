@@ -36,11 +36,11 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     variables:
-    - group: ADOWebAppDockerVariables
+    - group: ado-docker-variable
     steps:
     - task: AzureWebAppContainer@1
       inputs:
-       appName: $(var_AppServiceDockerName)
+       appName: $(WebAppName)
        azureSubscription: 'ado-docker-arm-service-connection-001'
        imageName: 'adowebappregistry001.azurecr.io/web:latest'
        # imageName: $(var_RegistryContainer)/$(webRepository):$(Build.buildId)
